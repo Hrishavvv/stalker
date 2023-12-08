@@ -35,7 +35,20 @@ def get_domain_info(domain_name):
 
 def main():
     try:
-        domain_name = input("Enter the domain name: ").strip()
+        # Displaying ASCII art before input
+        ascii_art = r'''
+         ____    __             ___    __                      
+        /\  _`\ /\ \__         /\_ \  /\ \                     
+        \ \,\L\_\ \ ,_\    __  \//\ \ \ \ \/'\      __   _ __  
+         \/_\__ \\ \ \/  /'__`\  \ \ \ \ \ , <    /'__`\/\`'__\
+           /\ \L\ \ \ \_/\ \L\.\_ \_\ \_\ \ \\`\ /\  __/\ \ \/ 
+           \ `\____\ \__\ \__/.\_\/\____\\ \_\ \_\ \____\\ \_\ 
+            \/_____/\/__/\/__/\/_/\/____/ \/_/\/_/\/____/ \/_/ 
+        '''
+        console.print(Text(ascii_art, style="red"))
+
+        # Input prompt in ANSI purple
+        domain_name = console.input("[bold purple]Enter the domain name: [/bold purple]").strip()
 
         with Progress(
             "{task.description}",
@@ -52,4 +65,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-      
+                
