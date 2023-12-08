@@ -17,18 +17,6 @@ def get_domain_info(domain_name):
                 value = ', '.join(str(v) for v in value)
             console.print(f"[bold]{key}[/bold]: {value}")
 
-        # Displaying ASCII art in cyan color
-        ascii_art = r'''
-         ____    __             ___    __                      
-        /\  _`\ /\ \__         /\_ \  /\ \                     
-        \ \,\L\_\ \ ,_\    __  \//\ \ \ \ \/'\      __   _ __  
-         \/_\__ \\ \ \/  /'__`\  \ \ \ \ \ , <    /'__`\/\`'__\
-           /\ \L\ \ \ \_/\ \L\.\_ \_\ \_\ \ \\`\ /\  __/\ \ \/ 
-           \ `\____\ \__\ \__/.\_\/\____\\ \_\ \_\ \____\\ \_\ 
-            \/_____/\/__/\/__/\/_/\/____/ \/_/\/_/\/____/ \/_/ 
-        '''
-        console.print(Text(ascii_art, style="cyan"))
-
         console.print("\n[bold cyan]Made by Hrishav Sanyal[/bold cyan]")
     except Exception as e:
         console.print(f"[bold red]Error:[/bold red] {e}")
@@ -45,10 +33,10 @@ def main():
            \ `\____\ \__\ \__/.\_\/\____\\ \_\ \_\ \____\\ \_\ 
             \/_____/\/__/\/__/\/_/\/____/ \/_/\/_/\/____/ \/_/ 
         '''
-        console.print(Text(ascii_art, style="red"))
+        console.print(Text(ascii_art, style="cyan"))
 
-        # Input prompt in ANSI purple
-        domain_name = console.input("[bold purple]Enter the domain name: [/bold purple]").strip()
+        # Input prompt in default color
+        domain_name = console.input("Enter the domain name: ").strip()
 
         with Progress(
             "{task.description}",
